@@ -8,8 +8,6 @@ COPY membrane.spec .
 
 # RUN rpmbuild --target "x86_x64" -bb membrane.spec --buildroot /github/workspace 
 
-RUN mkdir -p $GITHUB_WORKSPACE/artifacts
-RUN touch $GITHUB_WORKSPACE/artifacts/test.artifact
 
 COPY entrypoint.sh .
 

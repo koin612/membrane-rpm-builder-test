@@ -1,7 +1,13 @@
 FROM fedora:latest
 
-RUN echo "$GITHUB_WORKSPACE"
+RUN yum install -y createrepo rpm-build rpm-sign wget gcc python3 yum-utils unzip systemd java-17-openjdk-headless
 
-COPY entrypoint.sh /entrypoint.sh
+WORKDIR /app
 
-ENTRYPOINT [ "/entrypoint.sh" ]
+COPY membrane.spec .
+
+RUN rpmbuild --target "x86_x64" -bb membrane.spec
+
+COPY entrypoint.sh .
+
+ENTRYPOINT [ "./entrypoint.sh" ]

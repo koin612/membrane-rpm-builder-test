@@ -1,0 +1,6 @@
+name: Membrane RPM Test
+description: Build Membrane RPM Spec
+
+runs:
+  using: docker
+  image: Dockerfile

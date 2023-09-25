@@ -1,7 +1,7 @@
 FROM fedora:latest
 
-COPY entrypoint.sh /entrypoint.sh
-
 RUN echo "$GITHUB_WORKSPACE"
+
+COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT [ "/entrypoint.sh" ]

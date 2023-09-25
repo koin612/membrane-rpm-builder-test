@@ -1,7 +1,7 @@
 #!/bin/sh -l
 
-echo "Hello $1"
+echo "Hello $1" > $GITHUB_WORKSPACE/test.test
 time=$(date)
-echo "time=$time and workspace=$GITHUB_WORKSPACE" >> $GITHUB_OUTPUT
+echo "time=$GITHUB_WORKSPACE" >> $GITHUB_OUTPUT
 
 

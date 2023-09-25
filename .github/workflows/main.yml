@@ -5,13 +5,13 @@ jobs:
     runs-on: ubuntu-latest
     name: Test
     steps:
-      - name: Hello
-        id: hello
+      - name: Hello2
+        id: foo
         uses: actions/hello-world-docker-action@v2
         with:
-          who-to-greet: "fooman"
+          who-to-greet: "update"
       - name: Get output
-        run: echo "Time was ${{ steps.hello.outputs.time }}"
+        run: echo "Time was ${{ steps.foo.outputs.time }}"
       - name: Test upload
         uses: actions/upload-artifact@v3
         with:

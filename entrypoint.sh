@@ -1,4 +1,4 @@
 #!/bin/sh -l
 
 mkdir -p $GITHUB_WORKSPACE/artifacts
-touch $GITHUB_WORKSPACE/artifacts/test.artifact
+rpmbuild --target "x86_x64" -bb membrane.spec --buildroot $GITHUB_WORKSPACE/artifacts

@@ -8,7 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Containerized RPM Build
-        uses: ./.github/actions/action
+        uses: ./
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:

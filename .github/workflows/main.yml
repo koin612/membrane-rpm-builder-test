@@ -12,3 +12,5 @@ jobs:
           who-to-greet: "fooman"
       - name: Get output
         run: echo "Time was ${{ steps.hello.outputs.time }}"
+      - name: Test upload
+        run: ls -alh "${{ github.workspace }}"

@@ -4,5 +4,5 @@ echo "Hello $1"
 time=$(date)
 echo "time=$time" >> $GITHUB_OUTPUT
 
-echo "testfile" > /github/workspace/test.file
+echo "testfile" > $GITHUB_WORKSPACE/test.test
 

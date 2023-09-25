@@ -6,7 +6,7 @@ WORKDIR /app
 
 COPY membrane.spec .
 
-RUN rpmbuild --target "x86_x64" -bb membrane.spec
+RUN rpmbuild --target "x86_x64" -bb membrane.spec --buildroot /github/workspace 
 
 COPY entrypoint.sh .
 

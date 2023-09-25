@@ -12,5 +12,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: RPMs
-          path: ~/rpmbuild/RPMS/x86_64
+          name: rpms
+          path: ${{ github.workspace }}

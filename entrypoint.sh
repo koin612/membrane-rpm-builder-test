@@ -1,7 +1,6 @@
 #!/bin/sh -l
 
-echo $GITHUB_WORKSPACE
+ls /app
 
-ls ~
-
-mv ~/rpmbuild/RPMS/x86_64/*.rpm $GITHUB_WORKSPACE
+mkdir -p $GITHUB_WORKSPACE/artifacts
+mv /app/rpmbuild/RPMS/x86_64/*.rpm $GITHUB_WORKSPACE/artifacts
